@@ -7,11 +7,11 @@ class Woke < Formula
 
   if OS.mac?
     url "https://github.com/get-woke/woke/releases/download/v0.1.3/woke-0.1.3-darwin-amd64.tar.gz"
-    sha256 "e7dd042c75572784a74827b37bbcdb4014e7fc42a2ec2d5d38185eac47eddb27"
+    sha256 "6c7d8eb0d25853a402a36d9aa58edcb848c0cac57eb9bbdcd1cc81bb02ecba23"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/get-woke/woke/releases/download/v0.1.3/woke-0.1.3-linux-amd64.tar.gz"
-      sha256 "4bd175d06cb9b6c6fac6f4722257f2963d72af5b3a7980a38449796520a1d33f"
+      sha256 "247b0a4ce144bd4f354b11e5756d3a873f1e9f555e39106750e1173debd36db1"
     end
   end
 
