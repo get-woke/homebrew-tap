@@ -2,16 +2,16 @@
 class Woke < Formula
   desc "Detect non-inclusive language in your source code."
   homepage "https://getwoke.tech"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/get-woke/woke/releases/download/v0.3.0/woke-0.3.0-darwin-amd64.tar.gz"
-    sha256 "96e526766c3fca2d5af3ff0e24cf1351f2859d6998d708233f6f97cf7bc867f3"
+    url "https://github.com/get-woke/woke/releases/download/v0.4.0/woke-0.4.0-darwin-amd64.tar.gz"
+    sha256 "972c47654c2bafd4edb3f703af61874aa7b8281a7889eda17e4dec6686414cad"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.3.0/woke-0.3.0-linux-amd64.tar.gz"
-      sha256 "6bdeee17657266f16e8123f593d1ff27e6d2aea80e03187fb390e10af8354601"
+      url "https://github.com/get-woke/woke/releases/download/v0.4.0/woke-0.4.0-linux-amd64.tar.gz"
+      sha256 "5d17797814c15148c8b13d1d03a16b626ffff7e4a560109e411658ae80c1a2c3"
     end
   end
 
