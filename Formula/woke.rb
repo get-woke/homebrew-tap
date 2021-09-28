@@ -5,20 +5,28 @@
 class Woke < Formula
   desc "Detect non-inclusive language in your source code."
   homepage "https://getwoke.tech"
-  version "0.14.0"
+  version "0.15.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.14.0/woke-0.14.0-darwin-amd64.tar.gz"
-      sha256 "39752be258b4c8ecd59a8d460f30c8088db7b951eb4d47f7d5c7f31b4e43ad74"
+      url "https://github.com/get-woke/woke/releases/download/v0.15.0/woke-0.15.0-darwin-amd64.tar.gz"
+      sha256 "38f2e754469f90c877122a08602de9a48d3a32907c933650bca155e40b712c84"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/get-woke/woke/releases/download/v0.15.0/woke-0.15.0-darwin-arm64.tar.gz"
+      sha256 "659330063a9abc431ab238526baf3c2191e92f3b0825c214b8cd30a3ccfbf07e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.14.0/woke-0.14.0-linux-amd64.tar.gz"
-      sha256 "1ada664e988e64f666aee1547ac6554120f505368600b09d47e2d8dcc4e89e61"
+      url "https://github.com/get-woke/woke/releases/download/v0.15.0/woke-0.15.0-linux-amd64.tar.gz"
+      sha256 "b5d1b23aecd807a58463f6fe31a4c66aff72697431a2634bfc7fcf6fe7cc8d0f"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/get-woke/woke/releases/download/v0.15.0/woke-0.15.0-linux-arm64.tar.gz"
+      sha256 "25718005d2d18c87b069d7ba686a8fec57e37326377989260046afb8b9e69fc8"
     end
   end
 
