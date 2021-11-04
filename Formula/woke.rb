@@ -6,7 +6,6 @@ class Woke < Formula
   desc "Detect non-inclusive language in your source code."
   homepage "https://getwoke.tech"
   version "0.15.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
