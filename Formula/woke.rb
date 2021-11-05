@@ -5,20 +5,20 @@
 class Woke < Formula
   desc "Detect non-inclusive language in your source code."
   homepage "https://getwoke.tech"
-  version "0.16.0"
+  version "0.16.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.16.0/woke-0.16.0-darwin-amd64.tar.gz"
-      sha256 "843fcc284e569d09a1db77ed104bacac2e75b63bc3c4c0e4d3a4d56602b5b794"
+      url "https://github.com/get-woke/woke/releases/download/v0.16.1/woke-0.16.1-darwin-amd64.tar.gz"
+      sha256 "64b86d8d3ecf6c431b8f0405d6de0a49697376b3ece05324243ba01f9dd396fa"
 
       def install
         bin.install "woke"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/get-woke/woke/releases/download/v0.16.0/woke-0.16.0-darwin-arm64.tar.gz"
-      sha256 "0f238ef83b623ac8ed054953830272143c3ba3e2f64195aec841f9361376c932"
+      url "https://github.com/get-woke/woke/releases/download/v0.16.1/woke-0.16.1-darwin-arm64.tar.gz"
+      sha256 "89374ba82c6b1176d12310af7cddd09c4ce5db3e6516d70fca8e316858552b4f"
 
       def install
         bin.install "woke"
@@ -27,17 +27,17 @@ class Woke < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/get-woke/woke/releases/download/v0.16.0/woke-0.16.0-linux-arm64.tar.gz"
-      sha256 "220fa585c4591799e16e0a5cac4c0f434ee08359ec4d7450d604519fd166059f"
+    if Hardware::CPU.intel?
+      url "https://github.com/get-woke/woke/releases/download/v0.16.1/woke-0.16.1-linux-amd64.tar.gz"
+      sha256 "b2207420f3f8a3576cd7eb05a933b8a7772a050f3936fcc0bc15168b8ab85fb2"
 
       def install
         bin.install "woke"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.16.0/woke-0.16.0-linux-amd64.tar.gz"
-      sha256 "25c71891a8e5f19d1e41b77c64053d5447c2609afe632030ed236641f62d4a9b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/get-woke/woke/releases/download/v0.16.1/woke-0.16.1-linux-arm64.tar.gz"
+      sha256 "89729247508585127301c7d0862f65e10ccacf06dcfb520ba54864948d3228fc"
 
       def install
         bin.install "woke"
