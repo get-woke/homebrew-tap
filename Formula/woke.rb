@@ -5,20 +5,20 @@
 class Woke < Formula
   desc "Detect non-inclusive language in your source code."
   homepage "https://getwoke.tech"
-  version "0.18.0"
+  version "0.18.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.18.0/woke-0.18.0-darwin-amd64.tar.gz"
-      sha256 "38e44181d0fa3b15d9fbaa3bd91a3279bd4df03bb117beb81020a9ec2103d7e9"
+    if Hardware::CPU.arm?
+      url "https://github.com/get-woke/woke/releases/download/v0.18.1/woke-0.18.1-darwin-arm64.tar.gz"
+      sha256 "ec0ac2d1ba58f7b6078e28ef0dd3a16b2fe5ffe91d597bf8c68e3e3f3e7cbcff"
 
       def install
         bin.install "woke"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/get-woke/woke/releases/download/v0.18.0/woke-0.18.0-darwin-arm64.tar.gz"
-      sha256 "a6767946bc84931b8e6ce14cd160fd0d9ac7c1b946539c200476ee59eb24b62d"
+    if Hardware::CPU.intel?
+      url "https://github.com/get-woke/woke/releases/download/v0.18.1/woke-0.18.1-darwin-amd64.tar.gz"
+      sha256 "655cd77f31a2dec6a956dedae5247132d2806bedbc5d821e3abbdcc078de23ab"
 
       def install
         bin.install "woke"
@@ -28,16 +28,16 @@ class Woke < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/get-woke/woke/releases/download/v0.18.0/woke-0.18.0-linux-amd64.tar.gz"
-      sha256 "3a5caada7513bbbed21b5c74d297eb9b993a03cea8f8d6731433d436f6eee116"
+      url "https://github.com/get-woke/woke/releases/download/v0.18.1/woke-0.18.1-linux-amd64.tar.gz"
+      sha256 "5fa5780858a45ecfa9e8d597c17bb231da9af4b7bc2c7c3150f00e28f3d7de9f"
 
       def install
         bin.install "woke"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/get-woke/woke/releases/download/v0.18.0/woke-0.18.0-linux-arm64.tar.gz"
-      sha256 "d98943f503303afd6a87d0a278f1f9e20ad76fdaea8fa9291f11342f61f0c710"
+      url "https://github.com/get-woke/woke/releases/download/v0.18.1/woke-0.18.1-linux-arm64.tar.gz"
+      sha256 "8294eff862047078b3771f9e63aeb8ebd84073e6a8f870d5239411c3fc94a2ca"
 
       def install
         bin.install "woke"
